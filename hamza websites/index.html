@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamza — Animated Developer Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+    body {background: #0d0d0d; color: #fff; overflow-x: hidden;}
+
+    /* Smooth fade + slide animations */
+    .reveal {opacity: 0; transform: translateY(40px); transition: 0.9s ease;}
+    .reveal.active {opacity: 1; transform: translateY(0);}    
+
+    header {height: 100vh; display: flex; align-items: center; justify-content: space-between; padding: 0 8%; position: relative; overflow: hidden;}
+    header .left {max-width: 600px;}
+    header h1 {font-size: 4rem; line-height: 1.2; animation: fadeIn 2s ease forwards;} 
+    header h1 span {color: #ffae00;}
+    header p {margin-top: 15px; opacity: 0; animation: fadeUp 2s ease forwards 0.6s;}
+
+    /* Animated floating developer image */
+    header img {width: 420px; border-radius: 20px; animation: float 4s ease-in-out infinite;}
+    @keyframes float {0%{transform: translateY(0);}50%{transform: translateY(-18px);}100%{transform: translateY(0);}}
+    @keyframes fadeIn {0%{opacity:0; transform: translateY(30px);}100%{opacity:1; transform: translateY(0);}}
+    @keyframes fadeUp {0%{opacity:0;}100%{opacity:1;}}
+
+    section {padding: 80px 8%;}
+    h2 {font-size: 3rem; margin-bottom: 25px; position: relative;}
+    h2::after {content:''; width: 80px; height: 4px; background:#ffae00; position:absolute; left:0; bottom:-10px; border-radius: 8px;}
+
+    .about, .skills, .projects, .contact {margin-top: 40px;}
+
+    /* Skill bars */
+    .skill {margin-bottom: 20px;}
+    .skill-title {font-weight: 600; margin-bottom: 5px;}
+    .bar {background:#222; height:12px; border-radius:10px; overflow:hidden;}
+    .bar-in {height:12px; background:#ffae00; width:0; transition:1.5s ease;}    
+
+    /* Project Cards */
+    .project-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:30px;}
+    .card {background:#1a1a1a; padding:20px; border-radius:15px; transition:0.4s; transform:translateY(30px); opacity:0;}
+    .card.active {transform:translateY(0); opacity:1;}
+    .card:hover {transform:scale(1.03); background:#222;}
+
+    /* Contact */
+    .contact-box {background:#1a1a1a; padding:25px; border-radius:15px; width:100%; max-width:500px;}
+    input,textarea {width:100%; padding:12px; margin:10px 0; background:#111; border:1px solid #444; color:#fff; border-radius:8px;}
+    button {padding:12px 25px; border:0; background:#ffae00; border-radius:8px; font-weight:600; cursor:pointer;}
+
+    footer {text-align:center; padding:30px; opacity:0.6;} 
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="left">
+    <h1>Hello, I'm <span>Hamza</span><br>Front-End Developer & GRAPHIC DESIGNER</h1>
+    <p>IM CREATES A WEBSITES & LOGO DESIGN & PRUDUCK DESIGN AND MORE etc.</p>
+  </div>
+
+  <img src="./12030838656612609085.jpeg" alt="Hamza Developer Photo" />
+</header>
+
+<section>
+  <h2>About Me</h2>
+  <p>HELLO MY SELF SYED HAMZA SHAH IM WEB DEVELOPER & GRAPHIC DESIGNER CREATES A WEB SITES & LOGO DESIGN & PRUDUCT DESIGN ETC. </p>
+  <p>hamzasha809@gmail.com</p>
+  <p>03092507726 </p>
+  <p>any work any problem? </p>
+  <p>to cantac me iam here.</p>
+  <p class="reveal">I'm a passionate front-end developer who loves creating smooth animations, responsive designs, and beautiful UI experiences. I focus on writing clean code and turning ideas into live, interactive websites.</p>
+</section>
+
+<section>
+  <h2>Skills</h2>
+   <div> Creat websites<br/></div>
+  <div>Canva</div>
+  <div>website design</div>
+  <div>product design</div>
+   <div>logo design</div>
+    <div>Html</div>
+     <div>CSS</div>
+  <div class="skills">
+    <div class="skill reveal"><div class="skill-title">HTML</div><div class="bar"><div class="bar-in" data-width="95%"></div></div></div>
+    <div class="skill reveal"><div class="skill-title">CSS / Animations</div><div class="bar"><div class="bar-in" data-width="90%"></div></div></div>
+    <div class="skill reveal"><div class="skill-title">JavaScr
